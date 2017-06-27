@@ -9,6 +9,12 @@ $(document).ready(function(){
 		url: "http://localhost:3000/api/test"
 	})
 	// .done() = deferred promise
-	test.done()
+	test.done(function(data){
+		console.log(data);
+	})
+
+	test.fail(function(){
+		console.log("the server is not responding!!")
+	})
 
 });
