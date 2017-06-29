@@ -24,6 +24,7 @@ $(document).ready(function(){
 	})(jQuery);
 
 	$('.nav-tabs a[data-toggle="tab"]').on("click", function(e){
+		//
 		var token = window.localStorage.getItem("sessionToken");
 		if($(this).hasClass("disabled") && !token){
 			e.preventDefault();
