@@ -20,7 +20,9 @@ $(document).ready(function(){
 
 			signup.done(function(data){
 				WorkoutLog.setAuthHeader(data.sessionToken);
-
+				WorkoutLog.definition.fetchAll();
+				WorkoutLog.log.fetchAll();
+				
 				$("#signup-modal").modal("hide");
 				$(".disabled").removeClass("disabled");
 				$("#loginout").text("Logout")
@@ -50,7 +52,9 @@ $(document).ready(function(){
 			login.done(function(data){
 				console.log(data)
 				if(data.sessionToken){
-					WorkoutLog.setAuthHeader(data.sessionToken)
+					WorkoutLog.setAuthHeader(data.sessionToken);
+					WorkoutLog.definition.fetchAll();
+					WorkoutLog.log.fetchAll();
 				}
 
 				$("#login-modal").modal("hide");

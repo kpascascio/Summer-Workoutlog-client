@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 			fetchAll: function(){
 				if( window.localStorage.getItem("sessionToken")){
-					WorkoutLog.definition.fetchAll();
+					WorkoutLog.definition.userDefinition;
 				}
 			}
 		}
