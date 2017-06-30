@@ -48,6 +48,7 @@ $(document).ready(function(){
 			})
 
 			login.done(function(data){
+				console.log(data)
 				if(data.sessionToken){
 					WorkoutLog.setAuthHeader(data.sessionToken)
 				}
