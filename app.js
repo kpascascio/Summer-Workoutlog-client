@@ -41,6 +41,10 @@ $(document).ready(function(){
 		if(target === "#history"){
 			WorkoutLog.log.setHistory();
 		}
+
+		if(target === "#update-log"){
+			WorkoutLog.log.setDefinitions();
+		}
 	})
 
 	$(document).on('keypress', function(e){

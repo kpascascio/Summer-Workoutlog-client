@@ -15,6 +15,7 @@
 	 	    <li><a href="#feed" class="disabled" data-toggle="tab">View Feed</a></li>
 	 	    <!--Welcome portion-->
 	 	    <li a href="#welcome-login" class="disabled" data-toggle="tab"><span id="welcome"></span></li>
+	 	    <a href="#update-log" data-toggle="tab" class="disabled" hidden></a>
 	 	  </ul>
 
 	 	  <div class="container">
@@ -31,7 +32,7 @@
 	 	        </div>
 	 	      </div>
 	 	      <!-- DEFINE -->
-	 	      <div class="tab-pane" id="define">
+	 	      <div class="tab-pane fade" id="define">
 	 	        <h2>Define</h2>
 	 	          <label for="def-description">Description</label>
 	 	          <textarea class="form-control" id="def-description" rows="3" ></textarea>
@@ -50,7 +51,7 @@
 	 	      Here is a lab for the class
 	 	      get them to build the rest of the HTML
 	 	      -->
-	 	      <div class="tab-pane" id="log">
+	 	      <div class="tab-pane fade" id="log">
 	 	        <h2>Log</h2>
 	 	          <label>Result</label>
 	 	          <input type="text" class="form-control" id="log-result" />
@@ -71,13 +72,13 @@
 	 	          <button id="log-save" class="btn btn-primary">Save</button>
 	 	      </div>
 
-	 	      <div class="tab-pane" id="history">
+	 	      <div class="tab-pane fade" id="history">
 	 	        <h2>History</h2>
 	 	        <ul class="list-group" id="history-list">
 	 	        </ul>
 	 	      </div>
 
-	 	      <div class="tab-pane" id="feed">
+	 	      <div class="tab-pane fade" id="feed">
 	 	        <h2>Workout Feed</h2>
 	 	        <ul class="list-group" id="feed-list"></ul>
 	 	        <label>Send A Message</label>
@@ -85,7 +86,22 @@
 	 	        <br>
 	 	        <button id="msg-send" class="btn btn-primary">Send</button>
 	 	      </div>
-	 	    </div>
+	 	    
+			<div class="tab-pane fade" id="update-log">
+				<h2>Log Update</h2>
+				<label>Result</label>
+				<input type="hidden" class="form-control" id="update-id" />
+				<input type="text" class="form-control" id="update-result" />
+				<label>Workout Select:</label>
+				<select class="form-control" id="update-definition"></select>
+                <label>Notes</label>
+                <textarea class="form-control" id="update-description" rows="3"></textarea>
+                <br />
+                <button id="log-update" class="btn btn-primary">Save</button>
+            </div>
+		</div>
+
+
 
 	 	 <div class="modal fade" id="login-modal" role="dialog">
 	 	   <div class="modal-dialog">

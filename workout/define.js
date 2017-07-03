@@ -19,6 +19,9 @@ $(document).ready(function(){
 				})
 				define.done(function(data){
 					WorkoutLog.definition.userDefinition.push(data.definition);
+					$("a[href='#log'").tab("show");
+					$("#def-description").val("");
+					$("#def-logtype").val("");
 				}).fail(function(err){
 					console.log(err);
 				});
@@ -26,6 +29,21 @@ $(document).ready(function(){
 			},
 
 			fetchAll: function(){
+
+				var fetchDefs = $.ajax({
+					type: "GET",
+					url: WorkoutLog.API_BASE + "definition",
+					headers:{
+						"Authorization" : window.localStorage.getItem("sessionToken")
+					}
+				})
+
+				fetchDefs.done(function(){
+					WorkoutLog.definition.userDefinition = data
+				}).fail(function(err){
+					console.log(err)
+				})
+
 				if( window.localStorage.getItem("sessionToken")){
 					WorkoutLog.definition.userDefinition;
 				}
