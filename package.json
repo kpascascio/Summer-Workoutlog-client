@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/http-server/bin/http-server" 
+    "start": "node ./node_modules/http-server/bin/http-server" ,
+    "postinstall": "bower install"
   },
   "author": "Kenn Pascascio",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "http-server": "^0.10.0"
   }
+
 }
