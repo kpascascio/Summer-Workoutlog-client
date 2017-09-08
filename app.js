@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 	var WorkoutLog = (function($, undefined){
-		var API_BASE = "https://workoutapi.herokuapp.com/api"; 
+		var API_BASE = "https://workoutapi.herokuapp.com/api/"; 
 
 		var userDefinitions = []
 
