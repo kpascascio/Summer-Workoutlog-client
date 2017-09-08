@@ -16,7 +16,6 @@ $(document).ready(function(){
 				$("#log-definition").append(opts)
 				$("#update-definition").children().remove();
 				$("#update-definition").append(opts)
-
 			},
 
 			setHistory: function(){
